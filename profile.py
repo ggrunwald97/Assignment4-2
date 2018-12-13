@@ -51,7 +51,7 @@ for i in range(0, 15):
 		node.addService(pg.Execute(shell="sh", command="sudo /local/repository/passwordless.sh"))
 		# copy files to scratch
 		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /scratch"))
-		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /users/BC843101/scratch"))
+		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /users/GG850091/scratch"))
 		#node.addService(pg.Execute(shell="sh", command="sudo systemctl restart nfs-server.service"))
 		# addServices to install MPI in the /software directory on head node
 		node.addService(pg.Execute(shell="sh", command="sudo chmod 755 /local/repository/install_mpi.sh"))
@@ -72,7 +72,7 @@ for i in range(0, 15):
 
 		# copy files to scratch
 		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /scratch"))
-		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /users/BC843101/scratch"))
+		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /users/GG850091/scratch"))
 	else:
 		# compute-num nodes
 		node = request.XenVM("compute-" + str(i-2))
@@ -84,7 +84,7 @@ for i in range(0, 15):
 		# addServices to call bash scripts to add local mount points to client nodes for NFS's		
 		# copy files to scratch
 		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /scratch"))
-		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /users/BC843101/scratch"))
+		node.addService(pg.Execute(shell="sh", command="sudo cp /local/repository/source/* /users/GG850091/scratch"))
 		
 	node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:CENTOS7-64-STD"
 
