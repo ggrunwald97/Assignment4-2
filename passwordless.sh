@@ -83,21 +83,21 @@ cat $PUBKEY >> $SSHDIR/authorized_keys
 chmod 600 $SSHDIR/authorized_keys
 
 
-CUSTOM_USER=BC843101
-CUSTOM_SSHDIR=/users/BC843101/.ssh
+CUSTOM_USER=GG850091
+CUSTOM_SSHDIR=/users/GG850091/.ssh
 CUSTOM_GROUP=`id -gn ${CUSTOM_USER}`
 
 cp $PRIVKEY ${CUSTOM_SSHDIR}
 cp $PUBKEY ${CUSTOM_SSHDIR}
 cat $PUBKEY >> ${CUSTOM_SSHDIR}/authorized_keys
 sudo chown -R ${CUSTOM_USER}:${CUSTOM_GROUP} ${CUSTOM_SSHDIR}
-su BC843101 -c 'echo "StrictHostKeyChecking no" > ${CUSTOM_SSHDIR}/config'
-sudo touch /users/BC843101/.ssh/config
-sudo echo "StrictHostKeyChecking no" | sudo tee --append /users/BC843101/.ssh/config
-sudo echo "PasswordAuthentication yes" | sudo tee --append /users/BC843101/.ssh/config
+su GG850091 -c 'echo "StrictHostKeyChecking no" > ${CUSTOM_SSHDIR}/config'
+sudo touch /users/GG850091/.ssh/config
+sudo echo "StrictHostKeyChecking no" | sudo tee --append /users/GG850091/.ssh/config
+sudo echo "PasswordAuthentication yes" | sudo tee --append /users/GG850091/.ssh/config
 
 
-CUSTOM_USER=BC843101
+CUSTOM_USER=GG850091
 CUSTOM_SSHDIR=/root/.ssh
 CUSTOM_GROUP=`id -gn ${CUSTOM_USER}`
 
@@ -105,8 +105,8 @@ cp $PRIVKEY ${CUSTOM_SSHDIR}
 cp $PUBKEY ${CUSTOM_SSHDIR}
 cat $PUBKEY >> ${CUSTOM_SSHDIR}/authorized_keys
 sudo chown -R ${CUSTOM_USER}:${CUSTOM_GROUP} ${CUSTOM_SSHDIR}
-    #su BC843101 -c 'echo "StrictHostKeyChecking no" > ${CUSTOM_SSHDIR}/config'
-sudo touch /users/BC843101/.ssh/config
+    #su GG850091 -c 'echo "StrictHostKeyChecking no" > ${CUSTOM_SSHDIR}/config'
+sudo touch /users/GG850091/.ssh/config
 sudo echo "StrictHostKeyChecking no" | sudo tee --append /root/.ssh/config
 sudo echo "PasswordAuthentication yes" | sudo tee --append /root/.ssh/config
 
